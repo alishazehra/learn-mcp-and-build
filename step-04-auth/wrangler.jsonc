@@ -1,0 +1,24 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "learn-mcp-step-04",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-11-27",
+	"minify": false,
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"kv_namespaces": [
+		{
+			"binding": "NOTES",
+			"id": "a57c9665b1e5408189ca91b9d3eaeea8"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "AUTH_DB",
+			"database_name": "learn-mcp-step-04-auth",
+			"database_id": "96ae9a01-139b-47b5-9eef-899a726ff8a4",
+			"migrations_dir": "migrations"
+		}
+	]
+}

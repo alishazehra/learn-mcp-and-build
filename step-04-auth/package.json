@@ -1,0 +1,27 @@
+{
+  "name": "step-01-hello-world",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "typecheck": "tsc --noEmit",
+    "deploy": "wrangler deploy",
+    "auth:schema": "auth generate --config ./src/auth-schema.ts --adapter drizzle --dialect sqlite --output ./src/auth-schema.generated.ts --yes",
+    "db:generate": "drizzle-kit generate --config=drizzle.config.ts --name=better-auth",
+    "db:migrate:local": "wrangler d1 migrations apply learn-mcp-step-04-auth --local",
+    "db:migrate:remote": "wrangler d1 migrations apply learn-mcp-step-04-auth --remote"
+  },
+  "dependencies": {
+    "@better-auth/cimd": "1.7.29",
+    "@better-auth/mcp": "1.7.29",
+    "better-auth": "1.7.29"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261125.1",
+    "auth": "1.7.29",
+    "drizzle-kit": "0.31.11",
+    "drizzle-orm": "0.45.4",
+    "typescript": "7.0.2",
+    "wrangler": "4.166.0"
+  }
+}

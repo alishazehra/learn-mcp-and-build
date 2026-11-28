@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "learn-mcp-step-03",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "kv_namespaces": [
+    {
+      "binding": "NOTES",
+      "id": "a57c9665b1e5408189ca91b9d3eaeea8"
+    }
+  ]
+}
